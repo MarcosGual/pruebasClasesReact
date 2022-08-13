@@ -1,38 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-import Barrabuscador from './Components/BarraBuscador';
-import Lista from './Components/Lista';
+import { useState, createContext } from 'react';
+import RelojEffect from './Components/Reloj';
+import ClaseContextComponent from './Components/ClaseContextComponent';
+import FuncionContextComponent from './Components/FuncionContextComponent';
+
+export const ContextoTema = createContext();
 
 function App() {
-  const clasesReact = [
-    {
-      titulo: 'React 01',
-      temas: 'Intro a React',
-      curso: '0322S',
-      objetoID: 0,
-    },
-    {
-      titulo: 'React 02',
-      temas: 'Componentes y Props',
-      curso: '0322S',
-      objetoID: 1,
-    },
-    {
-      titulo: 'React 03',
-      temas: 'Estado y Hooks',
-      curso: '0322S',
-      objetoID: 2,
-    },
-  ];
+
+  const [temaOscuro, setTemaOscuro] = useState(true);
+
+  function toggleTemas() {
+    setTemaOscuro(prevTemaOscuro => !prevTemaOscuro);
+  }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Barrabuscador />
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <Lista lista={clasesReact}>Esto es una Lista</Lista>
-    </div>
+    <>
+      <ContextoTema.Provider value={temaOscuro}>
+        <button onClick={toggleTemas}>Cambiar Tema</button>
+        <FuncionContextComponent />
+        <ClaseContextComponent />
+      </ContextoTema.Provider>
+      <RelojEffect />
+    </>
   );
 }
 

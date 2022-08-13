@@ -16,7 +16,7 @@ const Buscar = () => {
         <div>
             <label htmlFor="buscar">Buscar: </label>
             <input id="buscar" type="text"
-                onChange={manejarCambio} />
+                onChange={manejarBusqueda} />
             <p>
                 Buscando <strong>{terminoBusqueda}</strong>...
             </p>
