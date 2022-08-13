@@ -30,8 +30,8 @@ const RelojEffect = () => {
         <>
             <h2>Reloj con Hooks</h2>
             {visible ? <Reloj hora={hora} /> : null}
-            <button onClick={() => setVisible(true)}>iniciar</button>
-            <button onClick={() => setVisible(false)}>detener</button>
+            <button onClick={() => setVisible(true)}>Iniciar Reloj</button>
+            <button onClick={() => setVisible(false)}>Detener Reloj</button>
         </>
     );
 }
