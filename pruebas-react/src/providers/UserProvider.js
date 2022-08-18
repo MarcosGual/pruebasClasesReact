@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
 
+//creamos el contexto usuario
 const userContext = React.createContext();
+//creamos el contexto para el botón
 const userToggleContext = React.createContext();
 
 export function useUserContext(){

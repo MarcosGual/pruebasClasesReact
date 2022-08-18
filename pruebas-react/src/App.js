@@ -1,17 +1,15 @@
 import './App.css';
 import React from 'react';
-import RelojEffect from './Components/Reloj';
-import Hijo from './Components/Hijo'
-import { UserProvider } from './UserProvider';
+import Chiste from './components/Chiste';
+import arrayChistes from './data/chistesData'
 
 function App() {
 
   return (
     <>
-      <RelojEffect />
-      <UserProvider>
-        <Hijo />
-      </UserProvider>
+      {arrayChistes.map(chiste=>{
+        return <Chiste key={chiste.id} linea={chiste.linea} punchline={chiste.punchline} />
+      })}
     </>
   );
 }
