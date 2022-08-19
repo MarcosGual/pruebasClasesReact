@@ -42,6 +42,18 @@ function Header(){
     ReactDOM.render(Header(), document.getElementById('root'));
 }
 
+### Desafío 1
+
+1. Dado el siguiente arreglo, devolver otro pero con los mismos números elevados al cuadrado. Utilizar método de arrays '.map()'.
+
+let numeros = [0, 1, 2, 3, 4, 5];
+
+2. Dado el siguiente arreglo de nombres, devolver otro pero con la primera letra de cada nombre en mayúsculas. También utilizar el método '.map()'.
+
+let nombres = ['matías', 'luciana', 'federico', 'cinthia'];
+
+3. Con el arreglo anterior de nombres, además de devolver los nombres con la primera letra en mayúscula, ponerlos en un string de para que cada nombre se inserte en la siguiente cadena: '<h3>Hola [nombre], bienvenido a la clase!</h3>'
+
 ### Tercer preguntero
 
 1. ¿Qué hace el método 'map()'?
